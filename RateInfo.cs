@@ -36,7 +36,7 @@ namespace HSTViewer
             {
                 string nFormat = (digitNum == 0) ? "0" : string.Concat("0.", "00".PadRight(digitNum, '0'));
                 int totalPoints = int.Parse((High - Low).ToString(nFormat).Replace(".", ""));
-                return (Open > Close) ? totalPoints : 0 - totalPoints;
+                return (Open <= Close) ? totalPoints : 0 - totalPoints;
             }
         }
 
