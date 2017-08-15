@@ -7,10 +7,12 @@ namespace HstFileReader
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine((1.78765342199d).ToString("N5"));
+            Console.WriteLine((0.78765342199d).ToString("N5"));
+            Console.WriteLine((199.56d).ToString("N0"));
             Console.WriteLine(Pack.ToUnixTime(DateTime.Parse("2017/7/25 13:11:16")).ToString());
             Console.WriteLine(Pack.ToDateTime(1500959476).ToString("yyyy-MM-dd HH:mm:ss"));
-            ReadFileVersion();
+            //ReadFileVersion();
             Console.Read();
         }
 
