@@ -163,6 +163,7 @@ namespace HSTViewer
             hstGrid.DataSource = rataList;
             List<RateInfo> rateInfoList = ratesCol;
             KLine.UrlStreamProvider.Instance.KRateInfo = ratesCol;
+            blnKLineDataSourceChanges = true;
             if (rateInfoList != null && rateInfoList.Any())
             {
                 dtPickBegin.Value = rateInfoList.First().CTM;
@@ -185,6 +186,8 @@ namespace HSTViewer
                         m.CTM >= dtPickBegin.Value.Date
                         && m.CTM < dtPickEnd.Value.AddDays(1.0).Date).ToList();
                 SortableBindingList<RateInfo> rataList = new SortableBindingList<RateInfo>(nInfosBinds);
+                KLine.UrlStreamProvider.Instance.KRateInfo = nInfosBinds;
+                blnKLineDataSourceChanges = true;
                 hstGrid.DataSource = rataList;
             }
         }
@@ -216,11 +219,17 @@ namespace HSTViewer
             }
         }
 
+        bool blnKLineDataSourceChanges = false;
+
         private void tabContainer_TabIndexChanged(object sender, EventArgs e)
         {
             if (tabContainer.SelectedTab == tabPageKLine)
             {
-                
+                if (blnKLineDataSourceChanges)
+                {
+                    KLineBrowser.Navigate("hstv://host/index.html");
+                    blnKLineDataSourceChanges = false;
+                }
             }
         }
 
