@@ -115,6 +115,8 @@
             this.rateFileOpenDlg = new System.Windows.Forms.OpenFileDialog();
             this.tabPageKLine = new System.Windows.Forms.TabPage();
             this.KLineBrowser = new System.Windows.Forms.WebBrowser();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tbxCandlestickSize = new System.Windows.Forms.TextBox();
             this.tabContainer.SuspendLayout();
             this.tabPageDat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -132,8 +134,8 @@
             // tabContainer
             // 
             this.tabContainer.Controls.Add(this.tabPageDat);
-            this.tabContainer.Controls.Add(this.tabPageCfg);
             this.tabContainer.Controls.Add(this.tabPageKLine);
+            this.tabContainer.Controls.Add(this.tabPageCfg);
             this.tabContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabContainer.Location = new System.Drawing.Point(0, 0);
             this.tabContainer.Margin = new System.Windows.Forms.Padding(4);
@@ -477,6 +479,8 @@
             // 
             // grpBoxSetting
             // 
+            this.grpBoxSetting.Controls.Add(this.tbxCandlestickSize);
+            this.grpBoxSetting.Controls.Add(this.label17);
             this.grpBoxSetting.Controls.Add(this.btnReadRateFile);
             this.grpBoxSetting.Controls.Add(this.btnOpenFile);
             this.grpBoxSetting.Controls.Add(this.lblFileTotalSize);
@@ -1048,8 +1052,28 @@
             this.KLineBrowser.Name = "KLineBrowser";
             this.KLineBrowser.Size = new System.Drawing.Size(1141, 656);
             this.KLineBrowser.TabIndex = 0;
+            this.KLineBrowser.Url = new System.Uri("about:blank", System.UriKind.Absolute);
             this.KLineBrowser.WebBrowserShortcutsEnabled = false;
             this.KLineBrowser.SizeChanged += new System.EventHandler(this.KLineBrowser_SizeChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(40, 549);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(141, 18);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "蜡烛图最大数：";
+            // 
+            // tbxCandlestickSize
+            // 
+            this.tbxCandlestickSize.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbxCandlestickSize.ForeColor = System.Drawing.Color.Red;
+            this.tbxCandlestickSize.Location = new System.Drawing.Point(171, 546);
+            this.tbxCandlestickSize.Name = "tbxCandlestickSize";
+            this.tbxCandlestickSize.Size = new System.Drawing.Size(116, 29);
+            this.tbxCandlestickSize.TabIndex = 7;
+            this.tbxCandlestickSize.Text = "1688";
             // 
             // HstForm
             // 
@@ -1168,6 +1192,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UnusedEmptySize;
         private System.Windows.Forms.TabPage tabPageKLine;
         private System.Windows.Forms.WebBrowser KLineBrowser;
+        private System.Windows.Forms.TextBox tbxCandlestickSize;
+        private System.Windows.Forms.Label label17;
     }
 }
 

@@ -108,6 +108,7 @@ namespace HSTViewer
             // symbol 货币对名称，如"EURUSD"
             strVal = fs.ReadString(ref bufBytes, Convert.ToInt32(tbxFHSymbolSize.Text.Trim()));
             lblSymbol.Text = strVal;
+            KLine.UrlStreamProvider.Instance.CandlestickSize = Convert.ToInt32(tbxCandlestickSize.Text.Trim());
             KLine.UrlStreamProvider.Instance.ResourceName = strVal;
 
             // period 数据周期：15代表 M15周期
