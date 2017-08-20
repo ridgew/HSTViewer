@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 
@@ -25,6 +26,7 @@ namespace HSTViewer
                 ViewHstFile(InitialFilePath);
                 BindCurrentFileInfo(InitialFilePath);
             }
+            Quokka.UI.WebBrowsers.PluggableProtocol.Register(KLine.UrlStreamProvider.Instance, Assembly.GetExecutingAssembly());
         }
 
         internal string InitialFilePath = string.Empty;
@@ -106,10 +108,12 @@ namespace HSTViewer
             // symbol 货币对名称，如"EURUSD"
             strVal = fs.ReadString(ref bufBytes, Convert.ToInt32(tbxFHSymbolSize.Text.Trim()));
             lblSymbol.Text = strVal;
+            KLine.UrlStreamProvider.Instance.ResourceName = strVal;
 
             // period 数据周期：15代表 M15周期
             iIntVer = fs.ReadInt(ref bufBytes);
             lblPeriod.Text = iIntVer.FormatPeriod();
+            KLine.UrlStreamProvider.Instance.RatePeriod = lblPeriod.Text.Trim();
 
             // digits 数据格式：小数点位数     //例如5，代表有效值至小数点5位，1.
             int iDigitNum = fs.ReadInt(ref bufBytes);
@@ -135,7 +139,7 @@ namespace HSTViewer
 
             List<RateInfo> ratesCol = new List<RateInfo>();
 
-        ReadRateInfo:
+            ReadRateInfo:
             RateInfo rate = new RateInfo(iDigitNum)
             {
                 Index = fs.Position,
@@ -157,6 +161,7 @@ namespace HSTViewer
             SortableBindingList<RateInfo> rataList = new SortableBindingList<RateInfo>(ratesCol);
             hstGrid.DataSource = rataList;
             List<RateInfo> rateInfoList = ratesCol;
+            KLine.UrlStreamProvider.Instance.KRateInfo = ratesCol;
             if (rateInfoList != null && rateInfoList.Any())
             {
                 dtPickBegin.Value = rateInfoList.First().CTM;
@@ -206,7 +211,21 @@ namespace HSTViewer
             {
                 ViewHstFile(filePath);
                 tabContainer.SelectedTab = tabPageDat;
+                KLineBrowser.Navigate("hstv://host/index.html");
             }
+        }
+
+        private void tabContainer_TabIndexChanged(object sender, EventArgs e)
+        {
+            if (tabContainer.SelectedTab == tabPageKLine)
+            {
+                
+            }
+        }
+
+        private void KLineBrowser_SizeChanged(object sender, EventArgs e)
+        {
+            KLineBrowser.Navigate("hstv://host/index.html");
         }
     }
 }

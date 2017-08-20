@@ -40,6 +40,12 @@ namespace HSTViewer
             }
         }
 
+        public string FormatPrice(double price)
+        {
+            string nFormat = (digitNum == 0) ? "0" : string.Concat("N", digitNum);
+            return price.ToString(nFormat).Replace(",","").Replace(" ","");
+        }
+
         public int CompareTo(object obj)
         {
             if (obj != null && obj is RateInfo)

@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NET40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -55,6 +55,16 @@
     <Compile Include="HstForm.Designer.cs">
       <DependentUpon>HstForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="KLine\ComSupport.cs" />
+    <Compile Include="KLine\EmbeddedResourceMap.cs" />
+    <Compile Include="KLine\IClassFactory.cs" />
+    <Compile Include="KLine\IInternetSession.cs" />
+    <Compile Include="KLine\PluggableProtocol.cs" />
+    <Compile Include="KLine\ProtocolBase.cs" />
+    <Compile Include="KLine\ProtocolSupport.cs" />
+    <Compile Include="KLine\QuokkaProtocolHandler.cs" />
+    <Compile Include="KLine\QuokkaProtocolHandlerFactory.cs" />
+    <Compile Include="KLine\UrlStreamProvider.cs" />
     <Compile Include="Pack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,6 +93,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="KLine\Content\echartsMin.js" />
+    <EmbeddedResource Include="KLine\Content\index.html" />
     <Content Include="terminal.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
