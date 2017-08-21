@@ -25,23 +25,23 @@ using System.Reflection;
 
 namespace Quokka.UI.WebBrowsers
 {
-	public class EmbeddedResourceMap
-	{
-		private readonly HashSet<Assembly> _assemblies = new HashSet<Assembly>();
+    public class EmbeddedResourceMap
+    {
+        private readonly HashSet<Assembly> _assemblies = new HashSet<Assembly>();
 
 #if NET40
-		private Lazy<Dictionary<string, EmbeddedResource>> _lazy;
-		private Dictionary<string, EmbeddedResource> GetDictionary()
-		{
-			return _lazy.Value;
-		} 
-		private void ClearDict()
-		{
-			_lazy = new Lazy<Dictionary<string, EmbeddedResource>>(CreateDict, true);
-		}
+        private Lazy<Dictionary<string, EmbeddedResource>> _lazy;
+        private Dictionary<string, EmbeddedResource> GetDictionary()
+        {
+            return _lazy.Value;
+        }
+        private void ClearDict()
+        {
+            _lazy = new Lazy<Dictionary<string, EmbeddedResource>>(CreateDict, true);
+        }
 #endif
 
-#if NET35 
+#if NET35
 		private Dictionary<string, EmbeddedResource> _dict;
 		private Dictionary<string, EmbeddedResource> GetDictionary() 
 		{
@@ -58,89 +58,94 @@ namespace Quokka.UI.WebBrowsers
 #endif
 
 
-		public EmbeddedResourceMap()
-		{
-			ClearDict();
-		}
+        public EmbeddedResourceMap()
+        {
+            ClearDict();
+        }
 
-		public void AddAssembly(Assembly assembly)
-		{
-			if (!_assemblies.Contains(assembly))
-			{
-				_assemblies.Add(assembly);
-				ClearDict();
-			}
-		}
+        public void AddAssembly(Assembly assembly)
+        {
+            if (!_assemblies.Contains(assembly))
+            {
+                _assemblies.Add(assembly);
+                ClearDict();
+            }
+        }
 
         public IUrlResourceStream OtherResourceStream { get; set; }
 
         public Stream GetStream(string name)
-		{
-			Uri uri = new Uri(name);
+        {
+            Uri uri = new Uri(name);
 
-			var path = uri.AbsolutePath;
-			var pieces = path.Split('/');
-			var fileName = pieces[pieces.Length - 1];
+            var path = uri.AbsolutePath;
+            var pieces = path.Split('/');
+            var fileName = pieces[pieces.Length - 1];
 
-			EmbeddedResource manifestInfo = null;
-			if (GetDictionary().TryGetValue(fileName, out manifestInfo))
-			{
-				return manifestInfo.Assembly.GetManifestResourceStream(manifestInfo.ResourceName);
-			}
+            EmbeddedResource manifestInfo = null;
+            if (GetDictionary().TryGetValue(fileName, out manifestInfo))
+            {
+                var rawStream = manifestInfo.Assembly.GetManifestResourceStream(manifestInfo.ResourceName);
+                if (rawStream.Length > 2 && rawStream.ReadByte() == 0x50 && rawStream.ReadByte() == 0x4B) //PK
+                {
+                    return ZipStorer.DecompressStream(rawStream);
+                }
+                return rawStream;
+            }
             else
             {
                 if (OtherResourceStream != null)
                     return OtherResourceStream.GetByFullUrl(name);
             }
-			return null;
-		}
+            return null;
+        }
 
-		private static readonly string[] Suffixes = new[]{".html",".htm",".js",".css",".png",".jpeg",".gif",};
+        private static readonly string[] Suffixes = new[] { ".html", ".htm", ".js", ".css", ".png", ".jpeg", ".gif", };
 
-		private static bool IsValidResource(string name)
-		{
-			return Suffixes.Any(name.EndsWith);
-		}
+        private static bool IsValidResource(string name)
+        {
+            return Suffixes.Any(name.EndsWith);
+        }
 
-		private Dictionary<string, EmbeddedResource> CreateDict()
-		{
-			var dict = new Dictionary<string, EmbeddedResource>(StringComparer.InvariantCultureIgnoreCase);
+        private Dictionary<string, EmbeddedResource> CreateDict()
+        {
+            var dict = new Dictionary<string, EmbeddedResource>(StringComparer.InvariantCultureIgnoreCase);
 
-			foreach (var assembly in _assemblies)
-			{
-				foreach (var resourceName in assembly.GetManifestResourceNames())
-				{
-					if (IsValidResource(resourceName))
-					{
-						var embeddedResource = new EmbeddedResource(assembly, resourceName);
+            foreach (var assembly in _assemblies)
+            {
+                foreach (var resourceName in assembly.GetManifestResourceNames())
+                {
+                    if (IsValidResource(resourceName))
+                    {
+                        var embeddedResource = new EmbeddedResource(assembly, resourceName);
 
-						// split name into bits separated by periods
-						var nameParts = resourceName.Split('.');
+                        // split name into bits separated by periods
+                        var nameParts = resourceName.Split('.');
 
-						var fileName = nameParts[nameParts.Length - 2] + "." + nameParts[nameParts.Length - 1];
+                        var fileName = nameParts[nameParts.Length - 2] + "." + nameParts[nameParts.Length - 1];
 
-						dict[fileName] = embeddedResource;
+                        dict[fileName] = embeddedResource;
 
-						// TODO: add alternatives that include the rest of the path
-					}
-				}
-			}
-			return dict;
-		}
+                        // TODO: add alternatives that include the rest of the path
+                    }
+                }
+            }
+            return dict;
+        }
 
-		private class EmbeddedResource
-		{
-			public Assembly Assembly { get; private set; }
+        private class EmbeddedResource
+        {
+            public Assembly Assembly { get; private set; }
 
-			public string ResourceName { get; private set; }
+            public string ResourceName { get; private set; }
 
-			public EmbeddedResource(Assembly assembly, string resourceName)
-			{
-				Assembly = assembly;
-				ResourceName = resourceName;
-			}
-		}
-	}
+            public EmbeddedResource(Assembly assembly, string resourceName)
+            {
+                Assembly = assembly;
+                ResourceName = resourceName;
+            }
+        }
+    }
 
     public interface IUrlResourceStream
     {

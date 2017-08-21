@@ -70,6 +70,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RateInfo.cs" />
     <Compile Include="SortableBindingList.cs" />
+    <Compile Include="ZipStorer.cs" />
     <EmbeddedResource Include="HstForm.resx">
       <DependentUpon>HstForm.cs</DependentUpon>
     </EmbeddedResource>
