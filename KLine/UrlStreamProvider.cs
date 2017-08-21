@@ -72,9 +72,9 @@ namespace HSTViewer.KLine
             else
             {
                 if (RatePeriod[0] == 'M')
-                    return "dd HH:mm";
+                    return "(dd)HH:mm";
                 if (RatePeriod[0] == 'H')
-                    return "MM-dd HH";
+                    return "MM-dd(HH)";
                 if (RatePeriod[0] == 'D')
                     return "yyyy-MM-dd";
             }
