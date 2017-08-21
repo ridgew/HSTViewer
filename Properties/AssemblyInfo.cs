@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("HSTViewer")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("MT4 hst历史数据文件查阅器")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HSTViewer")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCompany("https://github.com/ridgew/HSTViewer")]
+[assembly: AssemblyProduct("HSTViewer build on NET")]
+[assembly: AssemblyCopyright("© 2017 Ridge Wang. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
