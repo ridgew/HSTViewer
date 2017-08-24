@@ -1,0 +1,85 @@
+http://www.24k.hk/special/historydata.html
+
+金道贵金属推出「历史分笔数据」查询，为每口价格配置唯一的报价序号，且该唯一的报价序号将展示在 每笔成交订单上。
+现有客户可根据该序号和交易时间于GW Plus桌面版、WEB端及前台实现前后10口分笔价格 快速查询及预览，保证您的每个订单成交有根有据，清晰可查。
+同时，客户亦可通过本页面查看伦敦金及 伦敦银最近7日的分笔报价。
+
+
+免责声明︰
+1. 每一口报价的可成交量为金100手/银30手。
+2. 客户订单所对应的报价序号为订单触发后下一个可执行的最佳价格，成交时间与报价时间可能存在差异，于市况剧烈波动
+时，系统处理时间可能延长。
+
+User-Agent:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36
+
+
+2017-08-14 00:00:00
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17205670274016008687_1502805761683&pcode=022&searchdate=2017-08-14+00%3A00%3A00&pagetype=0&tickcode=&_=1502806131394
+jQuery17205670274016008687_1502805761683({"infoNo":0,"tickList":[{"ask":1289.6,"bid":1290.3,"bidtime":"2017-08-12 04:44:56","gmcode":"022"},{"ask":1289.58,"bid":1290.28,"bidtime":"2017-08-12 04:44:56","gmcode":"022"},{"ask":1289.58,"bid":1290.28,"bidtime":"2017-08-12 04:44:57","gmcode":"022"},{"ask":1289.63,"bid":1290.33,"bidtime":"2017-08-12 04:44:58","gmcode":"022"},{"ask":1290.36,"bid":1291.13,"bidtime":"2017-08-14 06:00:00","gmcode":"022"},{"ask":1290.04,"bid":1290.74,"bidtime":"2017-08-14 06:00:01","gmcode":"022"},{"ask":1289.94,"bid":1290.64,"bidtime":"2017-08-14 06:00:01","gmcode":"022"},{"ask":1289.85,"bid":1290.55,"bidtime":"2017-08-14 06:00:02","gmcode":"022"}],"firstCode":"95598E1748","lastCode":"6C5990CBE2"})
+
+
+2017-08-15 00:00:00
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17205670274016008687_1502805761680&pcode=022&searchdate=2017-08-15+00%3A00%3A00&pagetype=0&tickcode=&_=1502805859315
+jQuery17205670274016008687_1502805761680({"infoNo":0,"tickList":[{"ask":1284.53,"bid":1285.03,"bidtime":"2017-08-14 23:59:57","gmcode":"022"},{"ask":1284.52,"bid":1285.02,"bidtime":"2017-08-14 23:59:58","gmcode":"022"},{"ask":1284.51,"bid":1285.01,"bidtime":"2017-08-14 23:59:58","gmcode":"022"},{"ask":1284.52,"bid":1285.02,"bidtime":"2017-08-14 23:59:59","gmcode":"022"},{"ask":1284.45,"bid":1284.95,"bidtime":"2017-08-15 00:00:00","gmcode":"022"},{"ask":1284.45,"bid":1284.95,"bidtime":"2017-08-15 00:00:01","gmcode":"022"},{"ask":1284.46,"bid":1284.96,"bidtime":"2017-08-15 00:00:01","gmcode":"022"},{"ask":1284.42,"bid":1284.92,"bidtime":"2017-08-15 00:00:02","gmcode":"022"}],"firstCode":"715991C8FD","lastCode":"845991C902"})
+
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17205670274016008687_1502805761681&pcode=022&searchdate=2017-08-15+00%3A00%3A00&pagetype=1&tickcode=845991C902&_=1502805982419
+jQuery17205670274016008687_1502805761681({"infoNo":0,"tickList":[{"ask":1284.44,"bid":1284.94,"bidtime":"2017-08-15 00:00:02","gmcode":"022"},{"ask":1284.45,"bid":1284.95,"bidtime":"2017-08-15 00:00:03","gmcode":"022"},{"ask":1284.47,"bid":1284.97,"bidtime":"2017-08-15 00:00:03","gmcode":"022"},{"ask":1284.47,"bid":1284.97,"bidtime":"2017-08-15 00:00:04","gmcode":"022"},{"ask":1284.46,"bid":1284.96,"bidtime":"2017-08-15 00:00:04","gmcode":"022"},{"ask":1284.46,"bid":1284.96,"bidtime":"2017-08-15 00:00:05","gmcode":"022"},{"ask":1284.46,"bid":1284.96,"bidtime":"2017-08-15 00:00:05","gmcode":"022"},{"ask":1284.47,"bid":1284.97,"bidtime":"2017-08-15 00:00:06","gmcode":"022"}],"firstCode":"875991C902","lastCode":"955991C906"})
+
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17205670274016008687_1502805761682&pcode=022&searchdate=2017-08-15+00%3A00%3A00&pagetype=1&tickcode=955991C906&_=1502806024196
+jQuery17205670274016008687_1502805761682({"infoNo":0,"tickList":[{"ask":1284.46,"bid":1284.96,"bidtime":"2017-08-15 00:00:06","gmcode":"022"},{"ask":1284.46,"bid":1284.96,"bidtime":"2017-08-15 00:00:07","gmcode":"022"},{"ask":1284.45,"bid":1284.95,"bidtime":"2017-08-15 00:00:08","gmcode":"022"},{"ask":1284.46,"bid":1284.96,"bidtime":"2017-08-15 00:00:09","gmcode":"022"},{"ask":1284.51,"bid":1285.01,"bidtime":"2017-08-15 00:00:09","gmcode":"022"},{"ask":1284.44,"bid":1284.94,"bidtime":"2017-08-15 00:00:10","gmcode":"022"},{"ask":1284.43,"bid":1284.93,"bidtime":"2017-08-15 00:00:11","gmcode":"022"},{"ask":1284.43,"bid":1284.93,"bidtime":"2017-08-15 00:00:11","gmcode":"022"}],"firstCode":"975991C906","lastCode":"A95991C90B"})
+
+上一页
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17205670274016008687_1502805761704&pcode=022&searchdate=2017-08-15+22%3A09%3A36&pagetype=-1&tickcode=765992FE23&_=1502806244058
+
+下一页
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17205670274016008687_1502805761705&pcode=022&searchdate=2017-08-15+22%3A09%3A36&pagetype=1&tickcode=755992FE22&_=1502806258970
+
+2017-08-15 20:30:00
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17205670274016008687_1502805761715&pcode=022&searchdate=2017-08-15+20%3A30%3A00&pagetype=0&tickcode=&_=1502806349986
+jQuery17205670274016008687_1502805761715({"infoNo":0,"tickList":[{"ask":1272.71,"bid":1273.21,"bidtime":"2017-08-15 20:29:58","gmcode":"022"},{"ask":1272.72,"bid":1273.22,"bidtime":"2017-08-15 20:29:59","gmcode":"022"},{"ask":1272.74,"bid":1273.24,"bidtime":"2017-08-15 20:29:59","gmcode":"022"},{"ask":1272.78,"bid":1273.28,"bidtime":"2017-08-15 20:30:00","gmcode":"022"},{"ask":1272.16,"bid":1272.66,"bidtime":"2017-08-15 20:30:00","gmcode":"022"},{"ask":1270.44,"bid":1270.94,"bidtime":"2017-08-15 20:30:01","gmcode":"022"},{"ask":1270.41,"bid":1270.91,"bidtime":"2017-08-15 20:30:01","gmcode":"022"},{"ask":1270.63,"bid":1271.13,"bidtime":"2017-08-15 20:30:02","gmcode":"022"}],"firstCode":"D25992E946","lastCode":"E25992E94A"})
+
+
+Cache-Control:no-cache
+Connection:close
+Content-Length:693
+Content-Type:text/plain; charset=utf-8
+Date:Thu, 24 Aug 2017 12:41:50 GMT
+Server:Play! Framework;1.3.1;prod
+Set-Cookie:PLAY_OA_PROD_ERRORS=; Expires=Thu, 24 Aug 2017 12:41:50 GMT; Path=/
+Set-Cookie:PLAY_OA_PROD_FLASH=; Expires=Thu, 24 Aug 2017 12:41:50 GMT; Path=/
+Set-Cookie:PLAY_OA_PROD_SESSION="57769ac542a1a7366bc12296f6d4bc1fdf64e048-___ID=044a95c8-423f-4d2c-acd5-34b3362b65a4"; Path=/
+
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding:gzip, deflate
+Accept-Language:zh-CN,zh;q=0.8
+Cache-Control:max-age=0
+Connection:keep-alive
+Cookie:COOKIE_REFERER=http%3A//www.24k.hk/special/historydata.html; GWAFLGPHONECOOIKETRACK=GC7A4EE17A4F00001795254911A36C330; Hm_lvt_52a2828b884f1a2ba8a3e25efe98eb65=1502805746,1503112936,1503576523; Hm_lpvt_52a2828b884f1a2ba8a3e25efe98eb65=1503576523; __utma=238648067.1239564350.1502805744.1503112932.1503576524.4; __utmc=238648067; __utmz=238648067.1502805744.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PLAY_OA_PROD_SESSION="57769ac542a1a7366bc12296f6d4bc1fdf64e048-___ID=044a95c8-423f-4d2c-acd5-34b3362b65a4"
+Host:oa.24k.hk
+Upgrade-Insecure-Requests:1
+User-Agent:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36
+
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17&pcode=022&searchdate=2017-08-18+00%3A00%3A00&pagetype=-1&tickcode=BD5995BD79
+jQuery17({"infoNo":0,"tickList":[{"ask":1285.25,"bid":1285.75,"bidtime":"2017-08-17 23:59:49","gmcode":"022"},{"ask":1285.2,"bid":1285.7,"bidtime":"2017-08-17 23:59:50","gmcode":"022"},{"ask":1285.19,"bid":1285.69,"bidtime":"2017-08-17 23:59:50","gmcode":"022"},{"ask":1285.18,"bid":1285.68,"bidtime":"2017-08-17 23:59:51","gmcode":"022"},{"ask":1285.17,"bid":1285.67,"bidtime":"2017-08-17 23:59:51","gmcode":"022"},{"ask":1285.17,"bid":1285.67,"bidtime":"2017-08-17 23:59:52","gmcode":"022"},{"ask":1285.18,"bid":1285.68,"bidtime":"2017-08-17 23:59:52","gmcode":"022"},{"ask":1285.16,"bid":1285.66,"bidtime":"2017-08-17 23:59:53","gmcode":"022"}],"firstCode":"AB5995BD75","lastCode":"BA5995BD79"})
+
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17&pcode=022&searchdate=2017-08-18+00%3A00%3A00&pagetype=-1&tickcode=D05995BD7E
+jQuery17({"infoNo":0,"tickList":[{"ask":1285.13,"bid":1285.63,"bidtime":"2017-08-17 23:59:53","gmcode":"022"},{"ask":1285.15,"bid":1285.65,"bidtime":"2017-08-17 23:59:54","gmcode":"022"},{"ask":1285.08,"bid":1285.58,"bidtime":"2017-08-17 23:59:54","gmcode":"022"},{"ask":1285.09,"bid":1285.59,"bidtime":"2017-08-17 23:59:55","gmcode":"022"},{"ask":1285.08,"bid":1285.58,"bidtime":"2017-08-17 23:59:55","gmcode":"022"},{"ask":1285.08,"bid":1285.58,"bidtime":"2017-08-17 23:59:56","gmcode":"022"},{"ask":1285.07,"bid":1285.57,"bidtime":"2017-08-17 23:59:57","gmcode":"022"},{"ask":1285.13,"bid":1285.63,"bidtime":"2017-08-17 23:59:58","gmcode":"022"}],"firstCode":"BD5995BD79","lastCode":"CD5995BD7E"})
+
+
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17&pcode=022&searchdate=2017-08-18+00%3A00%3A00&pagetype=0&tickcode= &_=1502806131394
+jQuery17({"infoNo":0,"tickList":[{"ask":1285.1,"bid":1285.6,"bidtime":"2017-08-17 23:59:58","gmcode":"022"},{"ask":1285.12,"bid":1285.62,"bidtime":"2017-08-17 23:59:59","gmcode":"022"},{"ask":1285.1,"bid":1285.6,"bidtime":"2017-08-17 23:59:59","gmcode":"022"},{"ask":1285.05,"bid":1285.55,"bidtime":"2017-08-18 00:00:00","gmcode":"022"},{"ask":1285.06,"bid":1285.56,"bidtime":"2017-08-18 00:00:00","gmcode":"022"},{"ask":1284.99,"bid":1285.49,"bidtime":"2017-08-18 00:00:01","gmcode":"022"},{"ask":1285.02,"bid":1285.52,"bidtime":"2017-08-18 00:00:01","gmcode":"022"},{"ask":1285.05,"bid":1285.55,"bidtime":"2017-08-18 00:00:02","gmcode":"022"}],"firstCode":"D05995BD7E","lastCode":"E15995BD82"})
+
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17&pcode=022&searchdate=2017-08-18+00%3A00%3A00&pagetype=1&tickcode=E15995BD82
+jQuery17({"infoNo":0,"tickList":[{"ask":1285.14,"bid":1285.64,"bidtime":"2017-08-18 00:00:02","gmcode":"022"},{"ask":1285.14,"bid":1285.64,"bidtime":"2017-08-18 00:00:03","gmcode":"022"},{"ask":1285.15,"bid":1285.65,"bidtime":"2017-08-18 00:00:03","gmcode":"022"},{"ask":1285.16,"bid":1285.66,"bidtime":"2017-08-18 00:00:04","gmcode":"022"},{"ask":1285.16,"bid":1285.66,"bidtime":"2017-08-18 00:00:05","gmcode":"022"},{"ask":1285.12,"bid":1285.62,"bidtime":"2017-08-18 00:00:05","gmcode":"022"},{"ask":1285.15,"bid":1285.65,"bidtime":"2017-08-18 00:00:06","gmcode":"022"},{"ask":1285.17,"bid":1285.67,"bidtime":"2017-08-18 00:00:06","gmcode":"022"}],"firstCode":"E45995BD82","lastCode":"F55995BD86"})
+
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17&pcode=022&searchdate=2017-08-18+00%3A00%3A00&pagetype=1&tickcode=F55995BD86
+jQuery17({"infoNo":0,"tickList":[{"ask":1285.17,"bid":1285.67,"bidtime":"2017-08-18 00:00:07","gmcode":"022"},{"ask":1285.13,"bid":1285.63,"bidtime":"2017-08-18 00:00:07","gmcode":"022"},{"ask":1285.08,"bid":1285.58,"bidtime":"2017-08-18 00:00:08","gmcode":"022"},{"ask":1285.08,"bid":1285.58,"bidtime":"2017-08-18 00:00:08","gmcode":"022"},{"ask":1285.08,"bid":1285.58,"bidtime":"2017-08-18 00:00:09","gmcode":"022"},{"ask":1285.08,"bid":1285.58,"bidtime":"2017-08-18 00:00:09","gmcode":"022"},{"ask":1285.07,"bid":1285.57,"bidtime":"2017-08-18 00:00:10","gmcode":"022"},{"ask":1285.09,"bid":1285.59,"bidtime":"2017-08-18 00:00:11","gmcode":"022"}],"firstCode":"F65995BD87","lastCode":"045995BD8B"})
+
+
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17200962070290834598_1503576522734&pcode=023&searchdate=2017-08-24+00%3A00%3A00&pagetype=0&tickcode=&_=1503583639691
+jQuery17200962070290834598_1503576522734({"infoNo":0,"tickList":[{"ask":16.991,"bid":17.031,"bidtime":"2017-08-23 23:59:52","gmcode":"023"},{"ask":16.991,"bid":17.031,"bidtime":"2017-08-23 23:59:53","gmcode":"023"},{"ask":16.992,"bid":17.032,"bidtime":"2017-08-23 23:59:55","gmcode":"023"},{"ask":16.992,"bid":17.032,"bidtime":"2017-08-23 23:59:56","gmcode":"023"},{"ask":16.991,"bid":17.031,"bidtime":"2017-08-24 00:00:00","gmcode":"023"},{"ask":16.991,"bid":17.031,"bidtime":"2017-08-24 00:00:01","gmcode":"023"},{"ask":16.988,"bid":17.028,"bidtime":"2017-08-24 00:00:07","gmcode":"023"},{"ask":16.988,"bid":17.028,"bidtime":"2017-08-24 00:00:08","gmcode":"023"}],"firstCode":"E3599DA678","lastCode":"19599DA688"})
+
+http://oa.24k.hk/special/getHistoryData?callbackFun=jQuery17200962070290834598_1503576522735&pcode=023&searchdate=2017-08-24+00%3A00%3A00&pagetype=-1&tickcode=E3599DA678&_=1503583646131
+jQuery17200962070290834598_1503576522735({"infoNo":0,"tickList":[{"ask":16.988,"bid":17.028,"bidtime":"2017-08-23 23:59:47","gmcode":"023"},{"ask":16.988,"bid":17.028,"bidtime":"2017-08-23 23:59:47","gmcode":"023"},{"ask":16.988,"bid":17.028,"bidtime":"2017-08-23 23:59:48","gmcode":"023"},{"ask":16.988,"bid":17.028,"bidtime":"2017-08-23 23:59:49","gmcode":"023"},{"ask":16.99,"bid":17.03,"bidtime":"2017-08-23 23:59:50","gmcode":"023"},{"ask":16.991,"bid":17.031,"bidtime":"2017-08-23 23:59:51","gmcode":"023"},{"ask":16.991,"bid":17.031,"bidtime":"2017-08-23 23:59:51","gmcode":"023"},{"ask":16.99,"bid":17.03,"bidtime":"2017-08-23 23:59:52","gmcode":"023"}],"firstCode":"CA599DA673","lastCode":"E1599DA678"})
+
+jQuery17200962070290834598_1503576522739({"infoNo":0})
