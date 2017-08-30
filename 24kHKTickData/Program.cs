@@ -29,8 +29,18 @@ namespace HK24kTickData
             string pcode = "022";//LLC=022 LLG=023
             PageType pageType = PageType.Current;
 
+            DateTime? useDefineTime = null;
+            DateTime startTime = default(DateTime);
+            if (args.Length > 0 && DateTime.TryParse(args[0], out startTime))
+            {
+                useDefineTime = startTime;
+            }
+
             string tickFilePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase), "test.csv");
             tickFilePath = tickFilePath.Replace("file:\\", "").TrimStart('\\');
+            if (args.Length > 1 && File.Exists(args[1]))
+                tickFilePath = args[1];
+
             long totalTickCount = 0;
             int tryTimes = 0;
             long callTimes = 0;
@@ -47,7 +57,7 @@ namespace HK24kTickData
                     //hc.Headers[HttpRequestHeader.Connection] = "keep-alive";
                     hc.Headers[HttpRequestHeader.UserAgent] = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36";
 
-                    DateTime queryDate = DateTime.Parse("2017-08-24 00:00:00");
+                    DateTime queryDate = useDefineTime.HasValue ? useDefineTime.Value : DateTime.Now.Date.AddDays(-7);
                     string startDateStr = HttpUtility.UrlEncode(queryDate.ToString("yyyy-MM-dd hh:mm:ss"));
                     string tickcode = "";
                     bool error = false;
@@ -102,6 +112,7 @@ namespace HK24kTickData
                         }
                         else
                         {
+                            Console.Write(Environment.NewLine);
                             if (!string.IsNullOrEmpty(pageTickInfo.infoMsg))
                                 Console.WriteLine(pageTickInfo.infoMsg);
                             Console.WriteLine("已持续执行{0}次， ok.", callTimes);
