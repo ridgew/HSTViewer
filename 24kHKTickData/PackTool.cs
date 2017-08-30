@@ -48,5 +48,18 @@ namespace HK24kTickData
             return time.ToString("yyyy-MM-ddTHH:mm:sszzzz", DateTimeFormatInfo.InvariantInfo);
         }
 
+        public static void CurrentLineReplace(string lineStr)
+        {
+            ClearCurrentConsoleLine();
+            Console.Write(lineStr);
+        }
+
+        public static void ClearCurrentConsoleLine()
+        {
+            int currentLineCursor = Console.CursorTop;
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(new String(' ', Console.WindowWidth));
+            Console.SetCursorPosition(0, currentLineCursor);
+        }
     }
 }

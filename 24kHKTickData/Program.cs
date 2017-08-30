@@ -25,7 +25,7 @@ namespace HK24kTickData
             //Console.Read();
 
 
-            string jqueryCalllBack = "jQuery16";
+            string jqueryCalllBack = "jQuery19";
             string pcode = "022";//LLC=022 LLG=023
             PageType pageType = PageType.Current;
 
@@ -47,7 +47,7 @@ namespace HK24kTickData
                     //hc.Headers[HttpRequestHeader.Connection] = "keep-alive";
                     hc.Headers[HttpRequestHeader.UserAgent] = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36";
 
-                    DateTime queryDate = DateTime.Parse("2017-08-18 00:00:00");
+                    DateTime queryDate = DateTime.Parse("2017-08-24 00:00:00");
                     string startDateStr = HttpUtility.UrlEncode(queryDate.ToString("yyyy-MM-dd hh:mm:ss"));
                     string tickcode = "";
                     bool error = false;
@@ -63,6 +63,7 @@ namespace HK24kTickData
                         tryTimes++;
                         callTimes++;
                         jsBytes = hc.DownloadData(url);
+                        error = false;
                     }
                     catch (WebException)
                     {
@@ -76,15 +77,16 @@ namespace HK24kTickData
                         string jsString = System.Text.Encoding.UTF8.GetString(jsBytes);
                         string jsonStr = jsString.Substring(jqueryCalllBack.Length + 1).TrimEnd(')');
                         var pageTickInfo = JsonConvert.DeserializeObject<PageTickDataInfo>(jsonStr);
-
+                        var bidTime = default(DateTime);
                         if (pageTickInfo.tickList != null && pageTickInfo.tickList.Any())
                         {
                             totalTickCount += pageTickInfo.tickList.Length;
                             foreach (var tick in pageTickInfo.tickList)
                             {
                                 sw.WriteLine(string.Format("{0},{1},{2}", tick.bidtime.ToUnixTime(), tick.bid, tick.ask));
+                                bidTime = tick.bidtime;
                             }
-                            //sw.Flush();
+                            sw.Flush();
                         }
 
                         if (tickcode == string.Empty)
@@ -94,7 +96,7 @@ namespace HK24kTickData
 
                         if (tickcode != null)
                         {
-                            Console.WriteLine("已抓取{0}条.", totalTickCount);
+                            PackTool.CurrentLineReplace(string.Format("已抓取{0}条, {1}.", totalTickCount, bidTime));
                             Thread.Sleep(1000 * rnd.Next(1, 5));
                             goto crabData;
                         }
