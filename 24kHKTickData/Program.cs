@@ -1,10 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Web;
 
@@ -24,20 +24,26 @@ namespace HK24kTickData
             //Contract.Assert(timeMs == oldTimeMs);
             //Console.Read();
 
-
             string jqueryCalllBack = "jQuery19";
             string pcode = "022";//LLC=022 LLG=023
             PageType pageType = PageType.Current;
 
             DateTime? useDefineTime = null;
             DateTime startTime = default(DateTime);
-            if (args.Length > 0 && DateTime.TryParse(args[0], out startTime))
+            if (args.Length > 0)
             {
-                useDefineTime = startTime;
+                //允许设置开始时间
+                if (DateTime.TryParse(args[0], out startTime))
+                    useDefineTime = startTime;
+
+                //允许10位UnixTime
+                if (Regex.IsMatch(args[0], "^\\d{10}$"))
+                    useDefineTime = long.Parse(args[0]).ToDateTime();
             }
 
-            string tickFilePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase), "test.csv");
+            string tickFilePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase), pcode + ".csv");
             tickFilePath = tickFilePath.Replace("file:\\", "").TrimStart('\\');
+            //允许设置覆盖的文件
             if (args.Length > 1 && File.Exists(args[1]))
                 tickFilePath = args[1];
 
@@ -58,6 +64,7 @@ namespace HK24kTickData
                     hc.Headers[HttpRequestHeader.UserAgent] = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36";
 
                     DateTime queryDate = useDefineTime.HasValue ? useDefineTime.Value : DateTime.Now.Date.AddDays(-7);
+
                     string startDateStr = HttpUtility.UrlEncode(queryDate.ToString("yyyy-MM-dd hh:mm:ss"));
                     string tickcode = "";
                     bool error = false;

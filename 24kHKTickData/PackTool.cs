@@ -56,10 +56,16 @@ namespace HK24kTickData
 
         public static void ClearCurrentConsoleLine()
         {
-            int currentLineCursor = Console.CursorTop;
-            Console.SetCursorPosition(0, Console.CursorTop);
-            Console.Write(new String(' ', Console.WindowWidth));
-            Console.SetCursorPosition(0, currentLineCursor);
+            try
+            {
+                int currentLineCursor = Console.CursorTop;
+                Console.SetCursorPosition(0, Console.CursorTop);
+                Console.Write(new String(' ', Console.WindowWidth));
+                Console.SetCursorPosition(0, currentLineCursor);
+            }
+            catch(System.IO.IOException) {
+
+            }
         }
     }
 }
