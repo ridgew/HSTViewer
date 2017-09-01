@@ -14,6 +14,8 @@ namespace HK24kTickData
     {
         static void Main(string[] args)
         {
+            //System.Diagnostics.Debugger.Launch();
+
             ////Console.WriteLine("Hello World!");
             //string oldTimeMs = "1502806131394";
             //DateTime t = PackTool.ToDateTimeMs(oldTimeMs);
@@ -41,11 +43,34 @@ namespace HK24kTickData
                     useDefineTime = long.Parse(args[0]).ToDateTime();
             }
 
+            if (args.Length > 2 && (args[2] == "022" || args[2] == "023"))
+                pcode = args[2];
+
             string tickFilePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase), pcode + ".csv");
             tickFilePath = tickFilePath.Replace("file:\\", "").TrimStart('\\');
             //允许设置覆盖的文件
-            if (args.Length > 1 && File.Exists(args[1]))
+            if (args.Length > 1 && Directory.Exists(Path.GetDirectoryName(args[1])))
                 tickFilePath = args[1];
+
+            if (args.Length > 0 && File.Exists(args[0]))
+            {
+                tickFilePath = args[0];
+                using (StreamReader sr = new StreamReader(args[0]))
+                {
+                    string lineStr = sr.ReadLine();
+                    string pattern = "(\\d{10}),([\\d\\.]+),([\\d\\.]+)";
+                    if (lineStr != null && Regex.IsMatch(lineStr, pattern))
+                    {
+                        while ((lineStr = sr.ReadLine()) != null)
+                        {
+                            Match m = Regex.Match(lineStr, pattern);
+                            if (m.Success)
+                                useDefineTime = long.Parse(m.Groups[1].Value).ToDateTime();
+                        }
+                    }
+                    sr.Close();
+                }
+            }
 
             long totalTickCount = 0;
             int tryTimes = 0;
@@ -113,7 +138,7 @@ namespace HK24kTickData
 
                         if (tickcode != null)
                         {
-                            PackTool.CurrentLineReplace(string.Format("已抓取{0}条, {1}.", totalTickCount, bidTime));
+                            PackTool.CurrentLineReplace(string.Format("已抓取{0}条, {1:yyyy-MM-dd HH:mm:ss}.", totalTickCount, bidTime));
                             Thread.Sleep(1000 * rnd.Next(1, 5));
                             goto crabData;
                         }
