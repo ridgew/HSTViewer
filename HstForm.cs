@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace HSTViewer
@@ -85,10 +86,32 @@ namespace HSTViewer
                     return;
                 }
 
+                tbxRateFileFullPath.Text = filePath;
+                lblFileTotalSize.Text = fs.Length.FormatSize();
+
                 #region 绑定数据
                 BindDataWithFileStream(fs);
                 #endregion
             }
+        }
+
+        TimeSpan getTimeOffSet()
+        {
+            string offSet = tbxTimeOffSet.Text.Trim();
+            string pattern = "(\\+|\\-)(\\d{2}):(\\d{2})";
+            Match m = Regex.Match(offSet, pattern, RegexOptions.IgnoreCase);
+            if (m.Success)
+            {
+                if (m.Groups[1].Value == "-")
+                {
+                    return new TimeSpan(0 - Convert.ToInt32(m.Groups[2].Value), Convert.ToInt32(m.Groups[3].Value), 0);
+                }
+                else
+                {
+                    return new TimeSpan(Convert.ToInt32(m.Groups[2].Value), Convert.ToInt32(m.Groups[3].Value), 0);
+                }
+            }
+            return new TimeSpan(0, 0, 0);
         }
 
         List<RateInfo> FileRateInfoList = null;
@@ -137,6 +160,7 @@ namespace HSTViewer
 
             //略过备用字节大小
             fs.Position += Convert.ToInt32(tbxFHUnuseSize.Text.Trim());
+            TimeSpan diff = getTimeOffSet();
 
             List<RateInfo> ratesCol = new List<RateInfo>();
 
@@ -146,7 +170,9 @@ namespace HSTViewer
                 Index = fs.Position,
                 UnusedEmptySize = Convert.ToInt32(tbxRateUnuseSize.Text.Trim())
             };
-            rate.CTM = fs.ReadTime(ref bufBytes);
+
+            DateTime rawTime = fs.ReadTime(ref bufBytes);
+            rate.CTM = rawTime.Add(diff);
             rate.Open = fs.ReadDouble(ref bufBytes);
             rate.High = fs.ReadDouble(ref bufBytes);
             rate.Low = fs.ReadDouble(ref bufBytes);

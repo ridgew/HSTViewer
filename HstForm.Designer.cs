@@ -117,6 +117,7 @@
             this.tbxRateFileFullPath = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.rateFileOpenDlg = new System.Windows.Forms.OpenFileDialog();
+            this.tbxTimeOffSet = new System.Windows.Forms.TextBox();
             this.tabContainer.SuspendLayout();
             this.tabPageDat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -150,7 +151,7 @@
             this.tabPageDat.Controls.Add(this.splitContainer1);
             this.tabPageDat.Location = new System.Drawing.Point(4, 22);
             this.tabPageDat.Name = "tabPageDat";
-            this.tabPageDat.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageDat.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageDat.Size = new System.Drawing.Size(758, 433);
             this.tabPageDat.TabIndex = 0;
             this.tabPageDat.Text = "数据";
@@ -196,7 +197,7 @@
             // 
             this.btnApplyFilter.Enabled = false;
             this.btnApplyFilter.Location = new System.Drawing.Point(50, 325);
-            this.btnApplyFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnApplyFilter.Margin = new System.Windows.Forms.Padding(2);
             this.btnApplyFilter.Name = "btnApplyFilter";
             this.btnApplyFilter.Size = new System.Drawing.Size(63, 21);
             this.btnApplyFilter.TabIndex = 4;
@@ -207,7 +208,7 @@
             // dtPickEnd
             // 
             this.dtPickEnd.Location = new System.Drawing.Point(43, 294);
-            this.dtPickEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtPickEnd.Margin = new System.Windows.Forms.Padding(2);
             this.dtPickEnd.Name = "dtPickEnd";
             this.dtPickEnd.Size = new System.Drawing.Size(135, 21);
             this.dtPickEnd.TabIndex = 3;
@@ -215,7 +216,7 @@
             // dtPickBegin
             // 
             this.dtPickBegin.Location = new System.Drawing.Point(43, 265);
-            this.dtPickBegin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtPickBegin.Margin = new System.Windows.Forms.Padding(2);
             this.dtPickBegin.Name = "dtPickBegin";
             this.dtPickBegin.Size = new System.Drawing.Size(135, 21);
             this.dtPickBegin.TabIndex = 3;
@@ -285,7 +286,7 @@
             this.tbxCopyright.BackColor = System.Drawing.Color.Khaki;
             this.tbxCopyright.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxCopyright.Location = new System.Drawing.Point(17, 73);
-            this.tbxCopyright.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxCopyright.Margin = new System.Windows.Forms.Padding(2);
             this.tbxCopyright.Multiline = true;
             this.tbxCopyright.Name = "tbxCopyright";
             this.tbxCopyright.ReadOnly = true;
@@ -481,7 +482,7 @@
             // 
             this.tabPageKLine.Controls.Add(this.KLineBrowser);
             this.tabPageKLine.Location = new System.Drawing.Point(4, 22);
-            this.tabPageKLine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageKLine.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageKLine.Name = "tabPageKLine";
             this.tabPageKLine.Size = new System.Drawing.Size(758, 433);
             this.tabPageKLine.TabIndex = 2;
@@ -493,7 +494,7 @@
             this.KLineBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.KLineBrowser.IsWebBrowserContextMenuEnabled = false;
             this.KLineBrowser.Location = new System.Drawing.Point(0, 0);
-            this.KLineBrowser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KLineBrowser.Margin = new System.Windows.Forms.Padding(2);
             this.KLineBrowser.MinimumSize = new System.Drawing.Size(13, 13);
             this.KLineBrowser.Name = "KLineBrowser";
             this.KLineBrowser.Size = new System.Drawing.Size(758, 433);
@@ -507,7 +508,7 @@
             this.tabPageCfg.Controls.Add(this.grpBoxSetting);
             this.tabPageCfg.Location = new System.Drawing.Point(4, 22);
             this.tabPageCfg.Name = "tabPageCfg";
-            this.tabPageCfg.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageCfg.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageCfg.Size = new System.Drawing.Size(758, 433);
             this.tabPageCfg.TabIndex = 1;
             this.tabPageCfg.Text = "配置";
@@ -539,7 +540,7 @@
             this.tbxCandlestickSize.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxCandlestickSize.ForeColor = System.Drawing.Color.Red;
             this.tbxCandlestickSize.Location = new System.Drawing.Point(114, 364);
-            this.tbxCandlestickSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxCandlestickSize.Margin = new System.Windows.Forms.Padding(2);
             this.tbxCandlestickSize.Name = "tbxCandlestickSize";
             this.tbxCandlestickSize.Size = new System.Drawing.Size(79, 22);
             this.tbxCandlestickSize.TabIndex = 7;
@@ -559,7 +560,7 @@
             // 
             this.btnReadRateFile.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnReadRateFile.Location = new System.Drawing.Point(621, 27);
-            this.btnReadRateFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReadRateFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnReadRateFile.Name = "btnReadRateFile";
             this.btnReadRateFile.Size = new System.Drawing.Size(63, 22);
             this.btnReadRateFile.TabIndex = 5;
@@ -571,7 +572,7 @@
             // 
             this.btnOpenFile.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnOpenFile.Location = new System.Drawing.Point(546, 27);
-            this.btnOpenFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOpenFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpenFile.Name = "btnOpenFile";
             this.btnOpenFile.Size = new System.Drawing.Size(63, 22);
             this.btnOpenFile.TabIndex = 5;
@@ -604,6 +605,7 @@
             this.groupBox1.Controls.Add(this.tbxRateClose);
             this.groupBox1.Controls.Add(this.tbxRateLow);
             this.groupBox1.Controls.Add(this.tbxRateHigh);
+            this.groupBox1.Controls.Add(this.tbxTimeOffSet);
             this.groupBox1.Controls.Add(this.tbxRateOpen);
             this.groupBox1.Controls.Add(this.label24);
             this.groupBox1.Controls.Add(this.label22);
@@ -612,11 +614,11 @@
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Location = new System.Drawing.Point(371, 98);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(319, 97);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(353, 240);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(324, 240);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "报价数据";
@@ -626,9 +628,9 @@
             this.tbxRateTime.BackColor = System.Drawing.Color.Wheat;
             this.tbxRateTime.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxRateTime.Location = new System.Drawing.Point(86, 13);
-            this.tbxRateTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxRateTime.Margin = new System.Windows.Forms.Padding(2);
             this.tbxRateTime.Name = "tbxRateTime";
-            this.tbxRateTime.Size = new System.Drawing.Size(92, 21);
+            this.tbxRateTime.Size = new System.Drawing.Size(47, 21);
             this.tbxRateTime.TabIndex = 1;
             this.tbxRateTime.Text = "8";
             // 
@@ -637,7 +639,7 @@
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label36.ForeColor = System.Drawing.Color.Blue;
-            this.label36.Location = new System.Drawing.Point(193, 133);
+            this.label36.Location = new System.Drawing.Point(139, 133);
             this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(29, 12);
@@ -649,7 +651,7 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label35.ForeColor = System.Drawing.Color.Blue;
-            this.label35.Location = new System.Drawing.Point(193, 110);
+            this.label35.Location = new System.Drawing.Point(139, 110);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(41, 12);
@@ -661,7 +663,7 @@
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label34.ForeColor = System.Drawing.Color.Blue;
-            this.label34.Location = new System.Drawing.Point(193, 88);
+            this.label34.Location = new System.Drawing.Point(139, 88);
             this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(41, 12);
@@ -673,7 +675,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label33.ForeColor = System.Drawing.Color.Blue;
-            this.label33.Location = new System.Drawing.Point(193, 63);
+            this.label33.Location = new System.Drawing.Point(139, 63);
             this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(41, 12);
@@ -685,7 +687,7 @@
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label32.ForeColor = System.Drawing.Color.Blue;
-            this.label32.Location = new System.Drawing.Point(193, 40);
+            this.label32.Location = new System.Drawing.Point(139, 40);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(41, 12);
@@ -697,7 +699,7 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label31.ForeColor = System.Drawing.Color.Blue;
-            this.label31.Location = new System.Drawing.Point(193, 16);
+            this.label31.Location = new System.Drawing.Point(139, 16);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(89, 12);
@@ -708,9 +710,9 @@
             // 
             this.tbxRateUnuseSize.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxRateUnuseSize.Location = new System.Drawing.Point(86, 152);
-            this.tbxRateUnuseSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxRateUnuseSize.Margin = new System.Windows.Forms.Padding(2);
             this.tbxRateUnuseSize.Name = "tbxRateUnuseSize";
-            this.tbxRateUnuseSize.Size = new System.Drawing.Size(92, 21);
+            this.tbxRateUnuseSize.Size = new System.Drawing.Size(47, 21);
             this.tbxRateUnuseSize.TabIndex = 1;
             this.tbxRateUnuseSize.Text = "12";
             // 
@@ -719,9 +721,9 @@
             this.tbxRateVolumn.BackColor = System.Drawing.Color.Wheat;
             this.tbxRateVolumn.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxRateVolumn.Location = new System.Drawing.Point(86, 129);
-            this.tbxRateVolumn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxRateVolumn.Margin = new System.Windows.Forms.Padding(2);
             this.tbxRateVolumn.Name = "tbxRateVolumn";
-            this.tbxRateVolumn.Size = new System.Drawing.Size(92, 21);
+            this.tbxRateVolumn.Size = new System.Drawing.Size(47, 21);
             this.tbxRateVolumn.TabIndex = 1;
             this.tbxRateVolumn.Text = "8";
             // 
@@ -730,9 +732,9 @@
             this.tbxRateClose.BackColor = System.Drawing.Color.Wheat;
             this.tbxRateClose.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxRateClose.Location = new System.Drawing.Point(86, 107);
-            this.tbxRateClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxRateClose.Margin = new System.Windows.Forms.Padding(2);
             this.tbxRateClose.Name = "tbxRateClose";
-            this.tbxRateClose.Size = new System.Drawing.Size(92, 21);
+            this.tbxRateClose.Size = new System.Drawing.Size(47, 21);
             this.tbxRateClose.TabIndex = 1;
             this.tbxRateClose.Text = "8";
             // 
@@ -741,9 +743,9 @@
             this.tbxRateLow.BackColor = System.Drawing.Color.Wheat;
             this.tbxRateLow.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxRateLow.Location = new System.Drawing.Point(86, 84);
-            this.tbxRateLow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxRateLow.Margin = new System.Windows.Forms.Padding(2);
             this.tbxRateLow.Name = "tbxRateLow";
-            this.tbxRateLow.Size = new System.Drawing.Size(92, 21);
+            this.tbxRateLow.Size = new System.Drawing.Size(47, 21);
             this.tbxRateLow.TabIndex = 1;
             this.tbxRateLow.Text = "8";
             // 
@@ -752,9 +754,9 @@
             this.tbxRateHigh.BackColor = System.Drawing.Color.Wheat;
             this.tbxRateHigh.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxRateHigh.Location = new System.Drawing.Point(86, 61);
-            this.tbxRateHigh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxRateHigh.Margin = new System.Windows.Forms.Padding(2);
             this.tbxRateHigh.Name = "tbxRateHigh";
-            this.tbxRateHigh.Size = new System.Drawing.Size(92, 21);
+            this.tbxRateHigh.Size = new System.Drawing.Size(47, 21);
             this.tbxRateHigh.TabIndex = 1;
             this.tbxRateHigh.Text = "8";
             // 
@@ -763,9 +765,9 @@
             this.tbxRateOpen.BackColor = System.Drawing.Color.Wheat;
             this.tbxRateOpen.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxRateOpen.Location = new System.Drawing.Point(86, 38);
-            this.tbxRateOpen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxRateOpen.Margin = new System.Windows.Forms.Padding(2);
             this.tbxRateOpen.Name = "tbxRateOpen";
-            this.tbxRateOpen.Size = new System.Drawing.Size(92, 21);
+            this.tbxRateOpen.Size = new System.Drawing.Size(47, 21);
             this.tbxRateOpen.TabIndex = 1;
             this.tbxRateOpen.Text = "8";
             // 
@@ -818,12 +820,12 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label23.ForeColor = System.Drawing.Color.Firebrick;
-            this.label23.Location = new System.Drawing.Point(21, 153);
+            this.label23.Location = new System.Drawing.Point(20, 153);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(65, 12);
             this.label23.TabIndex = 0;
-            this.label23.Text = "备用大小：";
+            this.label23.Text = "备用长度：";
             // 
             // label19
             // 
@@ -870,10 +872,10 @@
             this.gbFileHeader.Controls.Add(this.label12);
             this.gbFileHeader.Controls.Add(this.label11);
             this.gbFileHeader.Location = new System.Drawing.Point(27, 97);
-            this.gbFileHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFileHeader.Margin = new System.Windows.Forms.Padding(2);
             this.gbFileHeader.Name = "gbFileHeader";
-            this.gbFileHeader.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbFileHeader.Size = new System.Drawing.Size(323, 240);
+            this.gbFileHeader.Padding = new System.Windows.Forms.Padding(2);
+            this.gbFileHeader.Size = new System.Drawing.Size(258, 240);
             this.gbFileHeader.TabIndex = 2;
             this.gbFileHeader.TabStop = false;
             this.gbFileHeader.Text = "文件头";
@@ -883,7 +885,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label26.ForeColor = System.Drawing.Color.Blue;
-            this.label26.Location = new System.Drawing.Point(183, 79);
+            this.label26.Location = new System.Drawing.Point(140, 79);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(59, 12);
@@ -895,7 +897,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label30.ForeColor = System.Drawing.Color.Blue;
-            this.label30.Location = new System.Drawing.Point(183, 143);
+            this.label30.Location = new System.Drawing.Point(140, 143);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(89, 12);
@@ -907,7 +909,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label29.ForeColor = System.Drawing.Color.Blue;
-            this.label29.Location = new System.Drawing.Point(183, 123);
+            this.label29.Location = new System.Drawing.Point(140, 123);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(23, 12);
@@ -919,7 +921,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label28.ForeColor = System.Drawing.Color.Blue;
-            this.label28.Location = new System.Drawing.Point(182, 103);
+            this.label28.Location = new System.Drawing.Point(139, 103);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(23, 12);
@@ -931,7 +933,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label27.ForeColor = System.Drawing.Color.Blue;
-            this.label27.Location = new System.Drawing.Point(182, 25);
+            this.label27.Location = new System.Drawing.Point(139, 25);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(23, 12);
@@ -943,7 +945,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label25.ForeColor = System.Drawing.Color.Blue;
-            this.label25.Location = new System.Drawing.Point(183, 51);
+            this.label25.Location = new System.Drawing.Point(140, 51);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(59, 12);
@@ -954,9 +956,9 @@
             // 
             this.tbxFHUnuseSize.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxFHUnuseSize.Location = new System.Drawing.Point(87, 166);
-            this.tbxFHUnuseSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxFHUnuseSize.Margin = new System.Windows.Forms.Padding(2);
             this.tbxFHUnuseSize.Name = "tbxFHUnuseSize";
-            this.tbxFHUnuseSize.Size = new System.Drawing.Size(92, 21);
+            this.tbxFHUnuseSize.Size = new System.Drawing.Size(47, 21);
             this.tbxFHUnuseSize.TabIndex = 1;
             this.tbxFHUnuseSize.Text = "52";
             // 
@@ -965,9 +967,9 @@
             this.tbxFHSyncTime.BackColor = System.Drawing.Color.Wheat;
             this.tbxFHSyncTime.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxFHSyncTime.Location = new System.Drawing.Point(87, 141);
-            this.tbxFHSyncTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxFHSyncTime.Margin = new System.Windows.Forms.Padding(2);
             this.tbxFHSyncTime.Name = "tbxFHSyncTime";
-            this.tbxFHSyncTime.Size = new System.Drawing.Size(92, 21);
+            this.tbxFHSyncTime.Size = new System.Drawing.Size(47, 21);
             this.tbxFHSyncTime.TabIndex = 1;
             this.tbxFHSyncTime.Text = "8";
             // 
@@ -976,9 +978,9 @@
             this.tbxFHDigits.BackColor = System.Drawing.Color.Wheat;
             this.tbxFHDigits.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxFHDigits.Location = new System.Drawing.Point(87, 119);
-            this.tbxFHDigits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxFHDigits.Margin = new System.Windows.Forms.Padding(2);
             this.tbxFHDigits.Name = "tbxFHDigits";
-            this.tbxFHDigits.Size = new System.Drawing.Size(92, 21);
+            this.tbxFHDigits.Size = new System.Drawing.Size(47, 21);
             this.tbxFHDigits.TabIndex = 1;
             this.tbxFHDigits.Text = "4";
             // 
@@ -987,9 +989,9 @@
             this.tbxFHPeriodSize.BackColor = System.Drawing.Color.Wheat;
             this.tbxFHPeriodSize.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxFHPeriodSize.Location = new System.Drawing.Point(87, 97);
-            this.tbxFHPeriodSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxFHPeriodSize.Margin = new System.Windows.Forms.Padding(2);
             this.tbxFHPeriodSize.Name = "tbxFHPeriodSize";
-            this.tbxFHPeriodSize.Size = new System.Drawing.Size(92, 21);
+            this.tbxFHPeriodSize.Size = new System.Drawing.Size(47, 21);
             this.tbxFHPeriodSize.TabIndex = 1;
             this.tbxFHPeriodSize.Text = "4";
             // 
@@ -997,9 +999,9 @@
             // 
             this.tbxFHSymbolSize.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxFHSymbolSize.Location = new System.Drawing.Point(87, 72);
-            this.tbxFHSymbolSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxFHSymbolSize.Margin = new System.Windows.Forms.Padding(2);
             this.tbxFHSymbolSize.Name = "tbxFHSymbolSize";
-            this.tbxFHSymbolSize.Size = new System.Drawing.Size(92, 21);
+            this.tbxFHSymbolSize.Size = new System.Drawing.Size(47, 21);
             this.tbxFHSymbolSize.TabIndex = 1;
             this.tbxFHSymbolSize.Text = "12";
             // 
@@ -1007,9 +1009,9 @@
             // 
             this.tbxFHCopyright.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxFHCopyright.Location = new System.Drawing.Point(87, 47);
-            this.tbxFHCopyright.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxFHCopyright.Margin = new System.Windows.Forms.Padding(2);
             this.tbxFHCopyright.Name = "tbxFHCopyright";
-            this.tbxFHCopyright.Size = new System.Drawing.Size(92, 22);
+            this.tbxFHCopyright.Size = new System.Drawing.Size(47, 22);
             this.tbxFHCopyright.TabIndex = 1;
             this.tbxFHCopyright.Text = "64";
             // 
@@ -1018,9 +1020,9 @@
             this.tbxFHVersionSize.BackColor = System.Drawing.Color.Wheat;
             this.tbxFHVersionSize.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxFHVersionSize.Location = new System.Drawing.Point(87, 20);
-            this.tbxFHVersionSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxFHVersionSize.Margin = new System.Windows.Forms.Padding(2);
             this.tbxFHVersionSize.Name = "tbxFHVersionSize";
-            this.tbxFHVersionSize.Size = new System.Drawing.Size(92, 22);
+            this.tbxFHVersionSize.Size = new System.Drawing.Size(47, 22);
             this.tbxFHVersionSize.TabIndex = 1;
             this.tbxFHVersionSize.Text = "4";
             // 
@@ -1067,7 +1069,7 @@
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(65, 12);
             this.label37.TabIndex = 0;
-            this.label37.Text = "备用大小：";
+            this.label37.Text = "备用长度：";
             // 
             // label13
             // 
@@ -1117,7 +1119,7 @@
             // 
             this.tbxRateFileFullPath.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbxRateFileFullPath.Location = new System.Drawing.Point(97, 27);
-            this.tbxRateFileFullPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxRateFileFullPath.Margin = new System.Windows.Forms.Padding(2);
             this.tbxRateFileFullPath.Name = "tbxRateFileFullPath";
             this.tbxRateFileFullPath.Size = new System.Drawing.Size(435, 21);
             this.tbxRateFileFullPath.TabIndex = 1;
@@ -1138,6 +1140,17 @@
             this.rateFileOpenDlg.DefaultExt = "hst";
             this.rateFileOpenDlg.Filter = "Hst文件|*.hst|所有文件|*.*";
             // 
+            // tbxTimeOffSet
+            // 
+            this.tbxTimeOffSet.BackColor = System.Drawing.Color.Wheat;
+            this.tbxTimeOffSet.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbxTimeOffSet.Location = new System.Drawing.Point(236, 14);
+            this.tbxTimeOffSet.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxTimeOffSet.Name = "tbxTimeOffSet";
+            this.tbxTimeOffSet.Size = new System.Drawing.Size(54, 22);
+            this.tbxTimeOffSet.TabIndex = 1;
+            this.tbxTimeOffSet.Text = "-08:00";
+            // 
             // HstForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1147,7 +1160,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HstForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HST数据阅读器";
+            this.Text = "HST数据阅读器 V1.02";
             this.Load += new System.EventHandler(this.HstForm_Load);
             this.tabContainer.ResumeLayout(false);
             this.tabPageDat.ResumeLayout(false);
@@ -1256,6 +1269,7 @@
         private System.Windows.Forms.WebBrowser KLineBrowser;
         private System.Windows.Forms.TextBox tbxCandlestickSize;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox tbxTimeOffSet;
     }
 }
 
